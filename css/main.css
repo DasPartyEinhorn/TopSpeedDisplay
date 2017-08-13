@@ -280,3 +280,17 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+
+.scrollwrapper {
+    height: 100%;
+    overflow-y: scroll;
+}
+.align_right {
+    text-align: right;
+    float: right;
+    cursor: pointer;
+}
+.badge {
+    float: none !important;
+}
