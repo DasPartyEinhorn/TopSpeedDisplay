@@ -1,102 +1,120 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<div class="pagewrapper">
 
-        <div class="row">
-            <div class="col-md-2">
-                <div class="scrollwrapper ">
-                    <ul id="child_list" class="list-group">
-                        <li class="list-group-item"> <span class="badge">1</span> Benny - 24,5 km/h <div class="align_right"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></div></li>
-                        <li class="list-group-item">Dapibus ac facilisis in<span class="glyphicon glyphicon-trash" aria-hidden="true"></span></li>
-                        <li class="list-group-item">Morbi leo risus<span class="glyphicon glyphicon-trash" aria-hidden="true"></span></li>
-                        <li class="list-group-item">Porta ac consectetur ac<span class="glyphicon glyphicon-trash" aria-hidden="true"></span></li>
-                        <li class="list-group-item">Vestibulum at eros<span class="glyphicon glyphicon-trash" aria-hidden="true"></span></li>
-                    </ul>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="scrollwrapper ">
+                <ul id="child_list" class="list-group">
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-3 ">
+            <div class="panel panel-default">
+                <div class="panel-heading">Kinder</div>
+                <div class="panel-body">
+                    <form id="child_input" action="#">
+                        <div class="form-group">
+                            <label for="child_name_input">Name</label>
+                            <input type="text"
+                                   name="name"
+                                   class="form-control"
+                                   id="child_name_input"
+                                   placeholder="Name"
+                                   required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="child_speed_input">Geschwindigkeit</label>
+                            <input type="number"
+                                   step=any
+                                   name="speed"
+                                   class="form-control"
+                                   id="child_speed_input"
+                                   placeholder="Geschwindigkeit"
+                                   required="true">
+                        </div>
+                        <button type="submit" class="btn btn-default">Hinzufügen</button>
+                    </form>
                 </div>
             </div>
 
-            <div class="col-md-4 ">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Kinder</div>
-                    <div class="panel-body">
-                        <form id="child_input" action="#">
-                            <div class="form-group">
-                                <label for="child_name_input">Name</label>
-                                <input type="text" name="name" class="form-control" id="child_name_input" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="child_speed_input">Geschwindigkeit</label>
-                                <input type="text" name="speed" class="form-control" id="child_speed_input" placeholder="Geschwindigkeit">
-                            </div>
-                            <button type="submit" class="btn btn-default">Hinzufügen</button>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Erwachsene</div>
-                    <div class="panel-body">
-                        <form id="parent_input" action="#">
-                            <div class="form-group">
-                                <label for="parent_name_input">Name</label>
-                                <input type="text" name="name" class="form-control" id="parent_name_input" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="parent_speed_input">Geschwindigkeit</label>
-                                <input type="text" name="speed" class="form-control" id="parent_speed_input" placeholder="Geschwindigkeit">
-                            </div>
-                            <button type="submit" class="btn btn-default">Hinzufügen</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-1">
-
-            </div>
-            <div class="col-md-2">
-                <div class="scrollwrapper">
-                    <ul id="parent_list" class="list-group">
-                        <li class="list-group-item"> <span class="badge">1</span> Benny - 24,5 km/h <div class="align_right"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></div></li>
-                        <li class="list-group-item">Dapibus ac facilisis in<span class="glyphicon glyphicon-trash" aria-hidden="true"></span></li>
-                        <li class="list-group-item">Morbi leo risus<span class="glyphicon glyphicon-trash" aria-hidden="true"></span></li>
-                        <li class="list-group-item">Porta ac consectetur ac<span class="glyphicon glyphicon-trash" aria-hidden="true"></span></li>
-                        <li class="list-group-item">Vestibulum at eros<span class="glyphicon glyphicon-trash" aria-hidden="true"></span></li>
-                    </ul>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">Erwachsene</div>
+                <div class="panel-body">
+                    <form id="parent_input" action="#">
+                        <div class="form-group">
+                            <label for="parent_name_input">Name</label>
+                            <input type="text"
+                                   name="name"
+                                   class="form-control"
+                                   id="parent_name_input"
+                                   placeholder="Name"
+                                   required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="parent_speed_input">Geschwindigkeit</label>
+                            <input type="number"
+                                   step=any
+                                   name="speed"
+                                   class="form-control"
+                                   id="parent_speed_input"
+                                   placeholder="Geschwindigkeit"
+                                   required="true">
+                        </div>
+                        <button type="submit" class="btn btn-default">Hinzufügen</button>
+                    </form>
                 </div>
             </div>
         </div>
 
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <div class="col-md-3">
+            <div class="scrollwrapper">
+                <ul id="parent_list" class="list-group">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <a href="board.html" role="button" target="_blank" class="btn btn-success btn-large">gehe zur Bestenliste</a>
 
 
-    </body>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</div>
+</body>
 </html>
