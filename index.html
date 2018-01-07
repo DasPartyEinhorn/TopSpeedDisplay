@@ -107,7 +107,46 @@
         </div>
     </div>
     <a href="board.html" role="button" target="_blank" class="btn btn-success btn-large">gehe zur Bestenliste</a>
+    <button class="btn btn-large btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Einstellungen
+    </button>
 
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h5>Einstellungen</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <form id="settings-form" action="#">
+                                <div class="form-group">
+                                    <label for="settings-show-count">Anzahl zu Zeigender Einträge</label>
+                                    <input type="number"
+                                           name="count"
+                                           class="form-control"
+                                           id="settings-show-count"
+                                           placeholder="Anzahl">
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-background-image">Link für ein Hintergrundbild</label>
+                                    <input type="text"
+                                           name="backbround"
+                                           class="form-control"
+                                           id="settings-background-image"
+                                           placeholder="http://img.zeit.de/karriere/beruf/2010-11/fair-play/wide__1300x731">
+                                </div>
+                                <button type="submit" class="btn btn-default">Speichern</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>

@@ -1,5 +1,6 @@
 var childList = [{name: 'Max Tester', speed: 25.5}];
 var parentList = [{name: 'John Mustermann', speed: 25.5}];
+var settings = {showCount: 10, backgroundLink: ''};
 
 $(document).ready(function () {
 
@@ -47,6 +48,20 @@ $('#parent_input').submit(function (e) {
     return false;
 });
 
+// submit of parent submit form
+$('#settings-form').submit(function (e) {
+    e.preventDefault();
+
+    var count = $('#settings-show-count').val();
+    var background = $('#settings-background-image').val();
+
+    settings.showCount = count;
+    settings.backgroundLink = background;
+
+    saveSettingsToStorage();
+    return false;
+});
+
 // click listener for delete child entry
 $(document).on('click', '.delete_icon_wrapper_child', function () {
     console.log('nth: ', $(this).parent('li').index());
@@ -70,6 +85,11 @@ function saveChildListToStorage() {
 
 function saveParentListToStorage() {
     localStorage.setItem('parentList', JSON.stringify(parentList));
+}
+
+function saveSettingsToStorage() {
+    localStorage.setItem('settings', JSON.stringify(settings));
+
 }
 
 function loadChildList() {
